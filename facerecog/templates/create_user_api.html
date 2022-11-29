@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+</head>
+<body>
+    <div id="id01"></div>
+
+<script>
+// var xmlhttp = new XMLHttpRequest();
+var url = "http://127.0.0.1:8000/responser/detect";
+
+// xmlhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//         // var myArr = JSON.parse(this.responseText);
+//         console.log(this.responseText)
+//         myFunction(myArr);
+//     }
+// };
+// xmlhttp.open("GET", url, true);
+// xmlhttp.send();
+
+// function myFunction(arr) {
+//     var out = "";
+//     var i;
+//     for(i = 0; i < arr.length; i++) {
+//         out += '<a href="' + arr[i].url + '">' +
+//         arr[i].display + '</a><br>';
+//     }
+//     document.getElementById("id01").innerHTML = out;
+// }
+
+fetch(url) // Call the fetch function passing the url of the API as a parameter
+.then((resp) => resp.text())
+.then(function(data)
+ {
+    // Your code for handling the data you get from the API
+    console.log(data.results)
+
+})
+// .catch(function() {
+//     // This is where you run code if the server returns any errors
+// });
+
+</script>
+</body>
+</html>

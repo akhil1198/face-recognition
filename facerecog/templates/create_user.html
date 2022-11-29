@@ -9,12 +9,64 @@
 <body>
     <br><br>
 	<div class="container">
-        <h1>hello user</h1>
+        <form method="post" enctype="multipart/form-data" class="form">
+            {% csrf_token %}
+			<div class="row">
+                <h1>Register Yourself</h1>
+				<div class="col-md-3">
+				</div>
+				<div class="col-md-6"> 
+					<hr>
+					<div class="form-group">
+						<input type="text" class="form-control" name="name" placeholder="Name" required>
+					</div>
+					
+					<div class="form-group">
+                       <h4><label>Upload Images of Face for Recognition:</label> </h4>
+        
+						<div>
+                            <label>Facing Front: </label>
+                            <input class="form-control-file" type="file" name="front"  required>
+                            <br>
+                        </div>
+                        <div>
+                            <label>Facing Down: </label>
+                            <input class="form-control-file" type="file" name="bottom"  required>
+                            <br>
+                        </div>
+                        <div>
+                            <label>Facing Right: </label>
+                            <input class="form-control-file" type="file" name="right"  required>
+                            <br>
+                        </div>
+                        <div>
+                            <label>Facing Left: </label>
+                            <input class="form-control-file" type="file" name="left"  required>
+                            <br>
+                        </div>
+                        <div>
+                            <label>Facing Above: </label>
+                            <input class="form-control-file" type="file" name="top"  required>
+                            <br>
+                        </div>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Create" class="btn btn-md btn-success" style="min-width:200px"> <br><br>
+                    </div>
+            </form>
+            <h4><label>Train After Registering</label></h4>
+                <div>
+                    <a href="/retrain">
+                        <input type="" value="Train" class="btn btn btn-primary" style="min-width: 300px;" >
+                    </a>
+                </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+
+
 </body>
+
 </html>

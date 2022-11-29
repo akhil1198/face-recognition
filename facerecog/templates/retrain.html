@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrain Successful</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <style>
+        .something{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        #some_list{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    {% if msg %}
+    <div class="something">
+        <div>
+            <h3 id="container"><b>{{ msg }} <b></h3>
+        </div>
+        <ul id="some_list">
+            <li>
+                <img src="http://127.0.0.1:8000/feed/192.168.43.226/" alt="" width="700px" height="600px">
+            </li>
+            <br>
+            <!-- <li>
+                <button><a href="/detect/192.168.43.226/"  target="_blank">Detect feed</a></button>
+            </li> -->
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        window.setTimeout("closecontainer()", 5000);
+
+        function closecontainer(){
+            document.getElementById("container").style.display="none";
+        }
+    </script>
+    {% endif %}
+</body>
+</html>
